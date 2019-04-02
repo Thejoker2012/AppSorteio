@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Meu Projeto</string>
+    <string name="clique_abaixo">Clique Abaixo!</string>
+    <string name="clique_aqui">Clique Aqui!</string>
+    <string name="text_escolha_numeros">Escolha um numero de 0 a 10</string>
+    <string name="button_jogar">Jogar</string>
+    <string name="text_digite_numero">Digite o número!</string>
+    <string name="resultado_exibicao">O número escolhido foi:</string>
+    <string name="numParaSorteio">Digite a Quantidade de Participantes</string>
+    <string name="digiteAqui">Digite Aqui</string>
+    <string name="nenhumNumero">Nenhum numero selecionado!</string>
+    <string name="textSorteio">..::Sorteio::..</string>
+</resources>
