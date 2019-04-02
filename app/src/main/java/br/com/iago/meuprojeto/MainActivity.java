@@ -24,14 +24,20 @@ public class MainActivity extends AppCompatActivity {
 
         int numero = new Random().nextInt(textInt + 1);
 
+        if(textDigiNumero.getText().toString().trim().equals("")) {
 
-        if (numero == 0) {
-            textResults.setText("Não é possível sortear sem participantes !!!");
-        } else if (numero == 0 || numero == 1) {
-            textResults.setText("Não é possível sortear sem participantes !!!");
-
-
+            try{
+                textResults.setText("Digite o número de pessoas que participará do sorteio!");
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }else if(textInt.equals(0) || textInt.equals(1)){
+            textResults.setText("Somente é possível realizar o sorteio com 2 ou mais pessoas!");
+        }else{
+            textResults.setText("O número selecionado é: "+numero);
         }
 
     }
+
+
 }
