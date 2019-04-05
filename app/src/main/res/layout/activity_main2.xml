@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fundoTela"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <TextView
+        android:id="@+id/campoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="Mudar Texto"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/botaoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Mudar Texto"
+        app:layout_constraintEnd_toEndOf="@+id/campoTexto"
+        app:layout_constraintStart_toStartOf="@+id/campoTexto"
+        app:layout_constraintTop_toBottomOf="@+id/campoTexto" />
+
+    <Button
+        android:id="@+id/botaoCor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="27dp"
+        android:text="Mudar Cor"
+        app:layout_constraintStart_toStartOf="@+id/botaoTexto"
+        app:layout_constraintTop_toBottomOf="@+id/botaoTexto" />
+
+</android.support.constraint.ConstraintLayout>

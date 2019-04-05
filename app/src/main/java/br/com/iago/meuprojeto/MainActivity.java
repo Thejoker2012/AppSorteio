@@ -1,5 +1,6 @@
 package br.com.iago.meuprojeto;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void proximaTela(View view){
+        Intent intent = new Intent(this,Main2Activity.class);
+        startActivity(intent);
+    }
+
     public void sortearNumero(View view) {
 
         TextView textDigiNumero = findViewById(R.id.textDigiNumero);
@@ -22,19 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textResults = findViewById(R.id.textoResultado);
 
-        int numero = new Random().nextInt(textInt + 1);
+        int min = 1;
 
-        if(textDigiNumero.getText().toString().trim().equals("")) {
+        Random numero = new Random();
+        int result = min + numero.nextInt(textInt);
+        if(textInt.equals(0) || textInt.equals(1)){
 
-            try{
-                textResults.setText("Digite o número de pessoas que participará do sorteio!");
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }else if(textInt.equals(0) || textInt.equals(1)){
             textResults.setText("Somente é possível realizar o sorteio com 2 ou mais pessoas!");
         }else{
-            textResults.setText("O número selecionado é: "+numero);
+            textResults.setText("O número selecionado é: "+result);
         }
 
     }
